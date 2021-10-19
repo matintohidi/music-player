@@ -36,16 +36,16 @@
   
           <h2 class="artist">DHARIA</h2>
           <h3 class="song">Sugar Brownies</h3>
-  
-          <input type="range" value="20" min="0" class="progress" id="range">
+
+          <div class="progressbar">
+            <input type="range" min="1" max="100" value="50" class="progress" id="range">
+          </div>
           <div class="duration">
-            <div class="start">00:00</div>
-            <div class="end">04:30</div>
+            <div class="currentTime">00:00</div>
+            <div class="musicTime">00:00</div>
           </div>
   
-          <audio class="audio" controls id="audio">
-            <source src="https://kk.soonami.ir/DHARIA-Sugar & Brownies.mp3" type="audio/mpeg"/>
-          </audio>
+          <audio src="https://kk.soonami.ir/DHARIA-Sugar & Brownies.mp3" class="audio" controls id="audio"></audio>
   
           <div class="playerBottomControls">
             <div class="btn btnMedium" id="backward">
@@ -54,7 +54,7 @@
   
             <div class="btn btnMedium blue play" id="play">
               <i class="fas fa-play btn-play"></i>
-              <i class="fas fa-pause pause-btn hide"></i>
+              <i class="fas fa-pause btn-pause hide"></i>
             </div>
   
             <div class="btn btnMedium" id="forward">
