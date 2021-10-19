@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matin Tohidi">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container">
+        <div class="player">
+          <div class="playerTopControl">
+            <div class="btn btnSmall" id="icon-menu">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu">
+                <ul class="menuItems">
+                    <li class="menuItem"><a href="#">About me</a></li>
+                    <li class="menuItem"><a href="https://github.com/matintohidi">My Git hub</a></li>
+                </ul>
+            </div>
+          </div>
+          <h5 class="title">Music Player</h5>
+          <div class="album">
+            <img src="../src/img/img.jpg" alt="Album Cover" class="img" loading="lazy"/>
+          </div>
+  
+          <h2 class="artist">DHARIA</h2>
+          <h3 class="song">Sugar Brownies</h3>
+  
+          <input type="range" value="20" min="0" class="progress" id="range">
+          <div class="duration">
+            <div class="start">00:00</div>
+            <div class="end">04:30</div>
+          </div>
+  
+          <audio class="audio" controls id="audio">
+            <source src="https://kk.soonami.ir/DHARIA-Sugar & Brownies.mp3" type="audio/mpeg"/>
+          </audio>
+  
+          <div class="playerBottomControls">
+            <div class="btn btnMedium" id="backward">
+              <i class="fas fa-backward"></i>
+            </div>
+  
+            <div class="btn btnMedium blue play" id="play">
+              <i class="fas fa-play btn-play"></i>
+              <i class="fas fa-pause pause-btn hide"></i>
+            </div>
+  
+            <div class="btn btnMedium" id="forward">
+              <i class="fas fa-forward"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="../src/js/script.js"></script>
+</body>
+</html>
+
