@@ -167,9 +167,10 @@ li {
 
 .progressbar {
     height: 6px;
-    background: #e1e1e1;
-    width: 80%;
+    width: auto;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .progress {
@@ -178,7 +179,7 @@ li {
     height: 7px;
     margin: 0;
     position: absolute;
-    width: 15%;
+    width: 250px;
     cursor: pointer;
     background: linear-gradient(90deg, #5c87fe 0%, #c4c8ce 0%);
 }
