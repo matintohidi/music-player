@@ -37,6 +37,10 @@ audio.addEventListener("timeupdate", function () {
   let barLength = (audio.currentTime / audio.duration) * 100;
   timerBar.style = `background: linear-gradient(90deg, #5c87fe ${barLength}%, #c4c8ce 0%);`
   timerBar.value = barLength;
+  if(barLength === 100){
+    pause.classList.toggle("hide");
+    play.classList.toggle("hide");
+  }
 });
 
 bwd.addEventListener("click", function () {
