@@ -1,14 +1,9 @@
 const iconMenu = document.querySelector("#icon-menu");
 const menu = document.querySelector(".menu");
 
-iconMenu.addEventListener("mouseenter", function () {
-  menu.classList.add("active");
-  menu.classList.add("translate");
-});
-
-iconMenu.addEventListener("mouseleave", function () {
-  menu.classList.remove("active");
-  menu.classList.remove("translate");
+iconMenu.addEventListener("click", function () {
+  menu.classList.toggle("active");
+  menu.classList.toggle("translate");
 });
 
 let musicTime = document.querySelector(".musicTime");
