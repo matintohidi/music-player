@@ -1,5 +1,5 @@
 ### Music Player
 
-<a src="https://matintohidi.github.io/music-player/music-player">View a sample online</a>
+# [_This is sample_ →](https://matintohidi.github.io/music-player/music-player)
 
 Thank you so much for reading!
