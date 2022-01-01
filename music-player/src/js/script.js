@@ -15,6 +15,9 @@ const fwd = document.querySelector("#forward");
 const pause = playPause.querySelector(".btn-pause");
 const play = playPause.querySelector(".btn-play");
 const timerBar = document.querySelector(".progress");
+const setVolume = document.querySelector("#volume");
+const volumeIcon = document.querySelector(".volume-icon");
+audio.volume = 0.5;
 
 playPause.addEventListener("click", () => {
   musicTime.textContent = getTime(audio.duration);
@@ -54,6 +57,20 @@ fwd.addEventListener("click", function () {
 
 timerBar.addEventListener("input" , function() {
     audio.currentTime = (this.value / 100) * audio.duration;
+})
+
+setVolume.addEventListener("input" , function() {
+  audio.volume = this.value / 100;
+  let volumeLength = Math.round(audio.volume * 100);
+  volume.style = `background: linear-gradient(90deg, #5c87fe ${volumeLength}%, #c4c8ce 0%);`
+  console.log(volumeLength)
+  if (volumeLength == 0) {
+    volumeIcon.classList.add('fa-volume-mute');
+    volumeIcon.classList.remove('fa-volume-down');
+  } else if (volumeLength > 0) {
+    volumeIcon.classList.add('fa-volume-down');
+    volumeIcon.classList.remove('fa-volume-mute');
+  }
 })
 
 function getTime(time) {

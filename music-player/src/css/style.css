@@ -9,8 +9,13 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  color: #000;
+  background-color: transparent;
+}
+
 body {
-  font-family: "Bebas Neue", "Fjalla One" ,  sans-serif;
+  font-family: "Bebas Neue", "Fjalla One", sans-serif;
 }
 
 img {
@@ -36,7 +41,7 @@ li {
 
 .player {
   width: 300px;
-  height: 550px;
+  height: 580px;
   background-color: var(--background);
   display: flex;
   flex-direction: column;
@@ -89,7 +94,7 @@ li {
 
 .btn:hover .fas {
   animation-name: rotate;
-  animation-duration: .8s;
+  animation-duration: 0.8s;
 }
 
 .btn:active {
@@ -137,7 +142,6 @@ li {
   margin: 0;
 }
 
-
 .duration {
   margin-top: -30px;
   display: flex;
@@ -166,40 +170,41 @@ li {
 }
 
 .progressbar {
-    height: 6px;
-    width: auto;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+  height: 6px;
+  width: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .progress {
-    -webkit-appearance: none;
-    -moz-apperance: none;
-    height: 7px;
-    margin: 0;
-    position: absolute;
-    width: 250px;
-    cursor: pointer;
-    background: linear-gradient(90deg, #5c87fe 0%, #c4c8ce 0%);
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  height: 7px;
+  margin: 0;
+  position: absolute;
+  width: 250px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #5c87fe 0%, #c4c8ce 0%);
+  border-radius: 25px;
 }
 
 .progress::-moz-range-track {
-    border: none;
-    background: none;
-    outline: none;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .progress:focus {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 .progress::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    background-color: transparent;
-    height: 13px;
-    width: 13px;
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  height: 13px;
+  width: 13px;
 }
 
 .hide {
@@ -207,12 +212,55 @@ li {
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 .translate {
   animation-name: translate;
   animation-duration: 0.5s;
+}
+
+.setVolume {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.volume {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  height: 7px;
+  position: absolute;
+  width: 130px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #5c87fe 50%, #c4c8ce 0%);
+  margin-top: 5px;
+  border-radius: 25px;
+}
+
+.volume::-moz-range-track {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.volume:focus {
+  outline: none;
+  border: none;
+}
+
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  height: 13px;
+  width: 10px;
+}
+
+.volume-icon {
+  position: absolute;
+  color: #5c87fe;
+  margin-right: 150px;
+  cursor: pointer;
 }
 
 @keyframes rotate {
