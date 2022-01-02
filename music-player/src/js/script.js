@@ -63,7 +63,6 @@ setVolume.addEventListener("input" , function() {
   audio.volume = this.value / 100;
   let volumeLength = Math.round(audio.volume * 100);
   volume.style = `background: linear-gradient(90deg, #5c87fe ${volumeLength}%, #c4c8ce 0%);`
-  console.log(volumeLength)
   if (volumeLength == 0) {
     volumeIcon.classList.add('fa-volume-mute');
     volumeIcon.classList.remove('fa-volume-down');
